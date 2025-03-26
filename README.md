@@ -133,7 +133,7 @@ class Template_json:
 
 ```
 python main.py run
---model {'gpt-4-1106-preview'}
+--model {'gpt-4-1106-preview' | 'o1'}
 --dataset_name {ADE | DCE | ChemProt | DDI | CDR | GDA | BioRED}
 --split {train | valid | test}
 --openai_key {Your API key}
@@ -141,7 +141,7 @@ python main.py run
 --normalized {True | False}
 --template {CDRTemplate_json | CDRTemplate_schema | ...}
 --save_dir {Directory of output files}
---max_tokens {4096}
+--max_tokens {4096 | 8192}
 --temperatures {0.7}
 --data_seed {0}
 ```
