@@ -12,7 +12,7 @@ from openai import OpenAI
 from tqdm import tqdm
 from typing import List, Set
 from copy import deepcopy
-from utils import pickle_save, pickle_load, make_dir, save_json
+from utils import pickle_save, pickle_load, make_dir, save_json, pickle_load_encrypted
 from universal_classes import F1Calculator, Oracle
 
 # model = 'gpt-4-1106-preview'
@@ -81,8 +81,9 @@ def process_response(response):
 
 
 def load_dataset(dataset_name, split):
+    private_key = "key/private_key.pem"
     base_directory = 'data/processed'
-    dataset = pickle_load(os.path.join(base_directory, dataset_name, f'{split}_data.save'))
+    dataset = pickle_load_encrypted(os.path.join(base_directory, dataset_name, f'{split}_data.save'), private_key)
     return dataset
 
 
