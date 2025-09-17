@@ -65,17 +65,17 @@ def query_plm(example,
                 # temperature=temperature
             )
         elif 'oss' in model:
-          client = client = OpenAI(
-            base_url="https://router.huggingface.co/nscale/v1",
-            api_key=openai_key)
-          response = client.chat.completions.create(
-                model=model,
-                messages=template.make_prompt(example),
-                max_completion_tokens=max_tokens,
-                temperature=temperature,
-                top_p=0.9,
-                n=1
-            )
+            client = client = OpenAI(
+              base_url="https://router.huggingface.co/nscale/v1",
+              api_key=openai_key)
+            response = client.chat.completions.create(
+                  model=model,
+                  messages=template.make_prompt(example),
+                  max_completion_tokens=max_tokens,
+                  temperature=temperature,
+                  top_p=0.9,
+                  n=1
+              )
 
     return response
 
