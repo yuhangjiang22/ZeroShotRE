@@ -133,7 +133,7 @@ class Template_json:
 
 ```
 python main.py run
---model {'gpt-4-1106-preview' | 'o1' | 'openai/gpt-oss-120b}
+--model {'gpt-4-1106-preview' | 'o1' | 'openai/gpt-oss-120b'}
 --dataset_name {ADE | DCE | ChemProt | DDI | CDR | GDA | BioRED}
 --split {train | valid | test}
 --openai_key {Your API key}
@@ -155,3 +155,5 @@ Arguments:
 `--template`: `dataset_name` + `Template_json` (inferred models) or `Template_schema` (explicit models). 
 
 `--max_examples`: Maxmium number of examples run by GPT. Set `None` to run on the whole `train/valid/test` dataset.
+
+`--openai_key`: An OpenAI API key is required for `gpt-4-1106-preview` and `o1` models, while a HuggingFace API key is required for `openai/gpt-oss-120b` model.
