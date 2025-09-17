@@ -133,7 +133,7 @@ class Template_json:
 
 ```
 python main.py run
---model {'gpt-4-1106-preview' | 'o1'}
+--model {'gpt-4-1106-preview' | 'o1' | 'openai/gpt-oss-120b}
 --dataset_name {ADE | DCE | ChemProt | DDI | CDR | GDA | BioRED}
 --split {train | valid | test}
 --openai_key {Your API key}
